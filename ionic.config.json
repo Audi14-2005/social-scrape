@@ -1,0 +1,8 @@
+{
+  "name": "SocialScrape",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "62fdbba8"
+}
