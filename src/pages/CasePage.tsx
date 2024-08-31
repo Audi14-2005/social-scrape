@@ -74,8 +74,8 @@ const CasePage: React.FC = () => {
   }, []);
 
   const handleSave = (newCaseId: string) => {
-    console.log(newCaseId);
     setCases([...cases, newCaseId]);
+    console.log(cases);
     localStorage.setItem("cases", JSON.stringify(cases));
   };
 

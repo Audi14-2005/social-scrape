@@ -32,7 +32,6 @@ const AddCase: React.FC<AddCaseProps> = ({ onSave }) => {
 
     const handleSave = () => {
         // Save the case data and close the modal
-        console.log(caseId);
         onSave(caseId);
         handleReset();
         setShowAddCasePopup(false);
