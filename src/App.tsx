@@ -14,6 +14,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import LoginPage from './pages/LoginPage';
 import Case from './pages/CasePage';
+import InstaLoginPage from './pages/InstaLoginPage';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -63,6 +64,11 @@ const App: React.FC = () => (
         <PageLayout>
           <Case />
         </PageLayout>
+      </Route>
+      <Route exact path="/instagram-login">
+          <PageLayout>
+            <InstaLoginPage />
+          </PageLayout>
       </Route>
       <Redirect from="/" to="/login" />
     </Switch>
