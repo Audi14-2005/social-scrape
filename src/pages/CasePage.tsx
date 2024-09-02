@@ -74,10 +74,10 @@ const CasePage: React.FC = () => {
   }, []);
 
   const handleSave = (newCaseId: string) => {
-    setCases([...cases, newCaseId]);
-    console.log(cases);
-    localStorage.setItem("cases", JSON.stringify(cases));
+    setCases((prevCases) => [...prevCases, newCaseId]);
+    localStorage.setItem('cases', JSON.stringify([...cases, newCaseId]));
   };
+
 
   return (
     <IonPage>
