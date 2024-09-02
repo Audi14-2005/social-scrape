@@ -10,16 +10,19 @@ import {
      IonLabel,
      IonInput,
      IonAlert,
+     IonChip
     } from "@ionic/react";
 
 interface LoginProps {
   pageTitle: string; // Prop for page title (Login or Instagram Login)
   para: String;
   actBtn: String;
+  chipMsg?: String;
+  handleUser?: () => void;
   onSubmit?: (username: string, password: string) => void; // Optional function for form submission handling
 }
 
-const Login: React.FC<LoginProps> = ({ pageTitle, para, actBtn, onSubmit }) => {
+const Login: React.FC<LoginProps> = ({ pageTitle, para, actBtn, chipMsg, handleUser, onSubmit }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showAlert, setShowAlert] = useState(false);
@@ -90,7 +93,7 @@ const Login: React.FC<LoginProps> = ({ pageTitle, para, actBtn, onSubmit }) => {
      <IonButton expand="block" color="light" onClick={handleReset}>
       Reset
      </IonButton>
-
+     <IonChip onClick={handleUser}>{chipMsg}</IonChip>
     <IonAlert
      isOpen={showAlert}
      onDidDismiss={handleAlertDismiss}
